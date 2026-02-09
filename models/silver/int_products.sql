@@ -5,4 +5,4 @@ select * from
 where product_id is not null
 QUALIFY row_number() over(
     partition by stg_products_id
-    order by file_modification_time desc ) = 1
+    order by file_time desc ) = 1
