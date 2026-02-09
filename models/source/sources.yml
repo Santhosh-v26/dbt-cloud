@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: landing_zone
+    description: "Raw CSVs landing in Databricks Volumes"
+    database: dbt_cloud
+    schema: dbt_cloud_bronze
+    loader: read_files
+    tables:
+      - name: customers
+      - name: orders
+      - name: payments
+      - name: products

@@ -1,0 +1,10 @@
+snapshots:
+  - name: customers_snapshot
+    relation: ref('int_customers')
+    config:
+      database: dbt_cloud
+      schema: snapshot
+      unique_key: customer_id
+      strategy: timestamp
+      updated_at: updatedDate
+      dbt_valid_to_current: "to_date('9999-12-31')"
